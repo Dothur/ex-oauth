@@ -68,6 +68,8 @@ public class CustomUserDetails implements UserDetails {
                 .password(entity.getPassword())
                 .email(entity.getEmail())
                 .phone(entity.getPhone())
+                .provider(entity.getProvider())
+                .providerId(entity.getProviderId())
                 .build();
     }
 
@@ -77,6 +79,8 @@ public class CustomUserDetails implements UserDetails {
         entity.setPassword(password);
         entity.setEmail(email);
         entity.setPhone(phone);
+        entity.setProvider(provider);
+        entity.setProviderId(providerId);
         return entity;
     }
 
